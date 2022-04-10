@@ -1,18 +1,20 @@
 import { Injectable } from '@nestjs/common';
+import { StudentRepository } from './student-repository';
 
-const students = [
-    { id: 1, name: 'Bhargav R G' },
-    { id: 2, name: 'Neeraja' }
-]
+
 
 @Injectable()
 export class StudentService {
 
+    constructor(public studentRepository: StudentRepository) {
+
+    }
+
     getAllStudents() {
-        return students;
+        return this.studentRepository.getAllStudents();
     }
 
     getStudentById(id: number) {
-        return students.find(student => student.id == id);
+        return this.studentRepository.getStudentById(id);
     }
 }
