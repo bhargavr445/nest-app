@@ -12,7 +12,8 @@ export class StudentController {
     }
 
     @Get('gatStudentById/:id')
-    getStudentById(@Param() id: any): number {
-        return id['id'];
+    getStudentById(@Param() id: any): any {
+        return this.studentService.getStudentById(id['id']);
+        
     }
 }
