@@ -1,0 +1,7 @@
+### basic call
+
+GET http://localhost:3000/api/test
+
+### basic call
+GET http://localhost:3000/api/test/123
+
