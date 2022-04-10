@@ -7,6 +7,7 @@ const students = [
 
 @Injectable()
 export class StudentRepository {
+    
     getAllStudents() {
         return students;
     }
